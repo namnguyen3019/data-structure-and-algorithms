@@ -4,24 +4,39 @@
 #         self.val = val
 #         self.next = next
 class Solution:
-    def isPalindrome(self, head: ListNode) -> bool:
+    def oddEvenList(self, head: ListNode) -> ListNode:
         pointer = head
-        arr = []
+        l1 = ListNode()
+        temp = l1
+        if head is None:
+            return head
         while pointer:
-            arr.append(pointer.val)
-            pointer = pointer.next
+            if pointer.next is None:
+                break
+            temp.next = ListNode(pointer.val)
+            pointer = pointer.next.next
+            temp = temp.next
         
-        n = len(arr)
-        if n < 2 :
-            return True
-        
-        for i in range (0, n//2):
-            if arr[i] != arr[n-1-i]:
-                return False
-        return True
+        print('current node: ', temp)
+        print('pointer', pointer)
+        if pointer is not None:
+            temp.next = ListNode(pointer.val)
+            temp = temp.next
             
+        pointer = head.next
+        while pointer:
+            if pointer.next is None:
+                break
+            temp.next = ListNode(pointer.val)
+            pointer = pointer.next.next
+            temp = temp.next
+        print(pointer)
+        if pointer is not None:
+            temp.next = ListNode(pointer.val)
+        
+        return l1.next
     
-    //Time: O(n2)
-    //Space: O(n)
-        
-        
+    
+    // Time: O(n2)
+    //  Space: O(n)
+    
