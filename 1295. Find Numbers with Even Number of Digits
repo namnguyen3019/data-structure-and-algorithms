@@ -1,0 +1,18 @@
+class Solution:
+    def findNumbers(self, nums: List[int]) -> int:
+        output = 0
+        for num in nums:
+            count = 1
+            while num / 10 >= 1:
+                count += 1
+                num = num/10
+                print(num)
+            
+            if count%2 == 0:
+                output += 1
+            
+        return output   
+    
+    // Time: O(n*m) where n = nums.length, m = number of digits of nums[i]
+    // Space: M(n)
+    
