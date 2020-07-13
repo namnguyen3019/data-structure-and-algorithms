@@ -27,5 +27,5 @@ class Solution:
         return l3.next
         
         
-        // Time: O(n*m)
+        // Time: O(n)
         //  Space: M(n+m)
