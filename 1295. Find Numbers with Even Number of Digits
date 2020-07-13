@@ -14,5 +14,6 @@ class Solution:
         return output   
     
     // Time: O(n*m) where n = nums.length, m = number of digits of nums[i]
+    // Time: O(n)
     // Space: M(n)
     
