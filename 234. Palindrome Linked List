@@ -21,7 +21,7 @@ class Solution:
         return True
             
     
-    //Time: O(n2)
+    //Time: O(n)
     //Space: O(n)
         
         
